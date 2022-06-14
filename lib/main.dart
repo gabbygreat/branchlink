@@ -85,7 +85,6 @@ class _MyHomePageState extends State<MyHomePage> {
             MaterialPageRoute(builder: (context) => const DefaultPage()),
           );
         }
-        
       }
     }, onError: (error) {
       PlatformException platformException = error as PlatformException;
@@ -343,7 +342,10 @@ class _MyHomePageState extends State<MyHomePage> {
                                           'Flutter Branch Description',
                                       contentMetadata: BranchContentMetaData()
                                         ..addCustomMetadata(
-                                            'text', firstController.text.isNotEmpty ? firstController.text : 'nothing')
+                                            'text',
+                                            firstController.text.isNotEmpty
+                                                ? firstController.text
+                                                : 'nothing')
                                         ..addCustomMetadata(
                                             'screen', 'first_screen'),
                                       //add as many custm metadata !!
@@ -384,7 +386,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         children: [
                           Flexible(
                               child: TextField(
-                                controller: secondController,
+                            controller: secondController,
                             decoration: const InputDecoration(
                               hintText: 'Enter a word you want',
                               focusedBorder: InputBorder.none,
@@ -419,7 +421,10 @@ class _MyHomePageState extends State<MyHomePage> {
                                           'Flutter Branch Description',
                                       contentMetadata: BranchContentMetaData()
                                         ..addCustomMetadata(
-                                            'text', secondController.text.isNotEmpty ? secondController.text : 'nothing')
+                                            'text',
+                                            secondController.text.isNotEmpty
+                                                ? secondController.text
+                                                : 'nothing')
                                         ..addCustomMetadata(
                                             'screen', 'second_screen'),
                                       //add as many custm metadata !!
@@ -460,7 +465,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         children: [
                           Flexible(
                               child: TextField(
-                                controller: noneController,
+                            controller: noneController,
                             decoration: const InputDecoration(
                               hintText: 'Enter a word you want',
                               focusedBorder: InputBorder.none,
@@ -495,7 +500,10 @@ class _MyHomePageState extends State<MyHomePage> {
                                           'Flutter Branch Description',
                                       contentMetadata: BranchContentMetaData()
                                         ..addCustomMetadata(
-                                            'text', noneController.text.isNotEmpty ? noneController.text : 'nothing')
+                                            'text',
+                                            noneController.text.isNotEmpty
+                                                ? noneController.text
+                                                : 'nothing')
                                         ..addCustomMetadata('screen', 'none'),
                                       //add as many custm metadata !!
                                       keywords: ['Plugin', 'Branch', 'Flutter'],
